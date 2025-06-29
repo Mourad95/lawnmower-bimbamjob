@@ -20,17 +20,35 @@ function App() {
   }, []);
 
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold mb-4">Résultats de la simulation</h1>
+    <div
+      style={{
+        textAlign: "center",
+        padding: "20px",
+        backgroundColor: "rgba(20, 233, 63, 0.57)",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: "2.25rem",
+          fontWeight: "bold",
+          marginBottom: "1rem",
+        }}
+      >
+        Résultats de la simulation
+      </h1>
       {results.length === 0 ? (
         <p>Chargement en cours…</p>
       ) : (
-        results.map((r, i) => (
-          <div key={i} className="mb-2">
-            <span className="font-semibold">Pour la tondeuse {i + 1} :</span> [{r.x},{" "}
-            {r.y}] direction {r.dir}
-          </div>
-        ))
+        <div>
+          {results.map((r, i) => (
+            <div key={i} style={{ marginBottom: "0.5rem" }}>
+              <span style={{ fontWeight: "600" }}>
+                Pour la tondeuse {i + 1} :
+              </span>{" "}
+              [{r.x}, {r.y}] direction {r.dir}
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );
