@@ -1,6 +1,6 @@
-type Lawn = { maxX: number; maxY: number };
+export type Lawn = { maxX: number; maxY: number };
 export type cardinal = "N" | "E" | "S" | "W";
-type Start = { x: number; y: number; dir: cardinal };
+export type Start = { x: number; y: number; dir: cardinal };
 
 const turnLeft = { N: "W", W: "S", S: "E", E: "N" };
 const turnRight = { N: "E", E: "S", S: "W", W: "N" };

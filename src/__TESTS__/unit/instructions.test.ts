@@ -1,7 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-import parseInstructions from "../utils/parseInstructions";
-
+import parseInstructions from "../../utils/parseInstructions";
 
 describe("parseFile", () => {
   it("should Read and split the instructions.txt file into lines", async () => {
@@ -12,7 +11,7 @@ describe("parseFile", () => {
     );
     //read file
     const text = await fs.readFile(filePath, "utf-8");
-    //split 
+    //split
     const lines = text.trim().split("\n");
     expect(lines).toEqual(["55", "44 S", "LFRRFFLFRFF", "22 N", "FFRLLRFRLF"]);
   });

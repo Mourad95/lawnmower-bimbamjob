@@ -1,11 +1,11 @@
-import simulateMower, { cardinal } from "../utils/simulateMowner";
+import simulateMower, { cardinal } from "../../utils/simulateMowner";
 
 describe("simulateMower", () => {
   const lawn = { maxX: 5, maxY: 5 };
 
   it("mowner 1 → [1,3] W", () => {
     //localisation and orientation
-    const start = { x: 4, y: 4, dir: "S" as cardinal }; 
+    const start = { x: 4, y: 4, dir: "S" as cardinal };
 
     const instructions = "LFRRFFLFRFF";
     const result = simulateMower(lawn, start, instructions);
