@@ -7,7 +7,7 @@ describe("parseFile", () => {
     //get file
     const filePath = path.resolve(
       __dirname,
-      "../instructions/instructions.txt"
+      "../../instructions/instructions.txt"
     );
     //read file
     const text = await fs.readFile(filePath, "utf-8");
